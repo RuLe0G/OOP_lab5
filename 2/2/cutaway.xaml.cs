@@ -149,8 +149,12 @@ namespace _2
         private static void EmpImgChanged(DependencyObject obj, DependencyPropertyChangedEventArgs args)
         {
             var cwImageForm = obj as cutaway;
-            cwImageForm.cwImage.Source = new BitmapImage(new Uri($"{cwImageForm.Image}"));
+            cwImageForm.cwImage.Source = new BitmapImage(new Uri($"pack://application:,,,/{cwImageForm.Image}"));
         }
 
+        private void cwImage_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

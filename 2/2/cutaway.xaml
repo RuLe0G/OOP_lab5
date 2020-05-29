@@ -10,7 +10,7 @@
         <TextBlock x:Name="cwSName" HorizontalAlignment="Left" Margin="73,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="150" FontSize="16" FontFamily="Yu Gothic" FontWeight="Bold" Text="Second Name"/>
         <TextBlock x:Name="cwAge" HorizontalAlignment="Left" Margin="73,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" FontSize="16" FontFamily="Yu Gothic" Text="Age"/>
         <TextBlock x:Name="cwCompany" HorizontalAlignment="Left" Margin="73,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="150" FontSize="16" FontFamily="Yu Gothic" FontStyle="Italic" Text="Company"/>
-        <Image x:Name="cwImage" HorizontalAlignment="Left" Height="125" Margin="303,10,0,0" VerticalAlignment="Top" Width="125"/>
+        <Image x:Name="cwImage" HorizontalAlignment="Left" Height="125" Margin="303,10,0,0" VerticalAlignment="Top" Width="125" MouseDown="cwImage_MouseDown"/>
         <Button x:Name="BtnCall" Content="☎️" Width="25" Height="25" ToolTip="Позвонить работяге" Click="BtnCall_Click" Margin="303,138,126.4,77"/>
         <Button x:Name="BtnSw" Content="👁" Width="25" Height="25" ToolTip="Просмотреть всю информацию" Click="BtnSw_Click" Margin="336,138,93.4,77"/>
         <Button x:Name="BtnCam" Content="📷" Width="25" Height="25" ToolTip="Фотокарточки работяги" Click="BtnCam_Click" Margin="370,138,59.4,77"/>

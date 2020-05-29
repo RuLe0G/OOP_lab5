@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="314.678" Width="970.764">
     <Grid>
-        <local:cutaway HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Age="140" SName="Ли" FName="Стэн" Company="Marvel Comics" Image="D:\Stud\C#\OOP_lab5\2\2\Resources\ded.jpg"/>
+        <local:cutaway HorizontalAlignment="Left" Height="Auto" Width="Auto" Age="140" SName="Ли" FName="Стэн" Company="Marvel Comics" Image="Resources/ded.jpg" Margin="0,0,0,34.8" />
+        <local:cutaway HorizontalAlignment="Left" Height="250" Age="43" SName="Сина" FName="Джон" Company="SOAPDICK INC." Image="Resources/Syna.jpg" VerticalAlignment="Top" Width="454" Margin="496,0,0,0"/>
 
     </Grid>
 </Window>
