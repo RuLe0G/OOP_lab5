@@ -94,7 +94,7 @@ namespace _1
                 txt = "";
             }
             // отрисовка картинки в точке (0,0)
-            pe.Graphics.DrawImage(bitmap, 0, 0, Size.Width, Size.Height);
+            pe.Graphics.DrawImage(bitmap, 0, 0, 10, Size.Height);
 
             stringFormat = new StringFormat();
             stringFormat.Alignment = StringAlignment.Center;
