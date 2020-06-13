@@ -1,4 +1,14 @@
-﻿namespace _1
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _1
 {
     partial class Form1
     {
@@ -55,6 +65,7 @@
             this.hoverButtonEllipse1.TabIndex = 1;
             this.hoverButtonEllipse1.Text = "hoverButtonEllipse1";
             this.hoverButtonEllipse1.UseVisualStyleBackColor = true;
+
             // 
             // Form1
             // 

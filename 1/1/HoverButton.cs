@@ -14,11 +14,13 @@ namespace _1
     class HoverButton : Button
     {
         private Color color = Color.SkyBlue;
-        private int i = 1;
-        private string txt;
+        private int i = 0;
+        private string txt = "";
         private StringFormat stringFormat;
         private bool txtb = false;
-
+        public List<Bitmap> pictures = new List<Bitmap>();
+        //private Bitmap[] img = new Bitmap[7] { Resources.Image1, Resources.Image2, Resources.Image3, Resources.Image4, Resources.Image5, Resources.Image6, Resources.Image7 };
+        // private string[] str = new string[7] { "Картинка 1", "Картинка 2", "Картинка 3", "Картинка 4", "Картинка 5", "Картинка 6", "Картинка 7"};
         public HoverButton() : base()
         {
             ForeColor = Color.White;
@@ -26,21 +28,25 @@ namespace _1
              20.25F,
              FontStyle.Bold,
              GraphicsUnit.Point,
-
              0);
         }
+
+
+
 
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
             txtb = true;
+            txt = "Картинка " + Convert.ToString(i + 1);
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
-            if (i == 7)
-                i = 0;
+
             i += 1;
+            if (i == pictures.Count)
+                i = 0;
         }
 
         protected override void OnMouseLeave(EventArgs e)
@@ -56,45 +62,17 @@ namespace _1
         {
             base.OnPaint(pe);
             // получение картинки из ресурсов
-            Bitmap bitmap = null;
+            //Bitmap bitmap = null;
 
-            switch (i)
-            {
-                case 1:
-                    bitmap = new Bitmap(Resources.Image1);
-                    txt = "Картинка 1";
-                    break;
-                case 2:
-                    bitmap = new Bitmap(Resources.Image2);
-                    txt = "Картинка 2";
-                    break;
-                case 3:
-                    bitmap = new Bitmap(Resources.Image3);
-                    txt = "Картинка 3";
-                    break;
-                case 4:
-                    bitmap = new Bitmap(Resources.Image4);
-                    txt = "Картинка 4";
-                    break;
-                case 5:
-                    bitmap = new Bitmap(Resources.Image5);
-                    txt = "Картинка 5";
-                    break;
-                case 6:
-                    bitmap = new Bitmap(Resources.Image6);
-                    txt = "Картинка 6";
-                    break;
-                case 7:
-                    bitmap = new Bitmap(Resources.Image7);
-                    txt = "Картинка 7";
-                    break;
-            }
+            //        bitmap = pictures[i];
+
             if (txtb == false)
             {
                 txt = "";
-            }
+            } else
+                txt = "Картинка " + Convert.ToString(i + 1);
             // отрисовка картинки в точке (0,0)
-            pe.Graphics.DrawImage(bitmap, 0, 0, 10, Size.Height);
+            pe.Graphics.DrawImage(pictures[i], 0, 0, Size.Width, Size.Height);
 
             stringFormat = new StringFormat();
             stringFormat.Alignment = StringAlignment.Center;
